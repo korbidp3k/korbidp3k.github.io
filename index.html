@@ -1,1 +1,146 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name - CV</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #f4f4f4;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #555;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #007BFF, #00C6FF);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+    }
+    /* Section Styles */
+    .section {
+      padding: 30px 40px;
+      border-bottom: 1px dashed #e2e2e2;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #333;
+      border-left: 4px solid #007BFF;
+      padding-left: 10px;
+    }
+    .section h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #007BFF;
+    }
+    .section p {
+      margin-bottom: 15px;
+    }
+    /* Skills */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #007BFF;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section {
+        padding: 20px;
+      }
+      header h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Your Name</h1>
+      <p>Job Title • Email: youremail@example.com • Phone: (123) 456-7890</p>
+    </header>
+    <!-- About Me -->
+    <section class="section about">
+      <h2>About Me</h2>
+      <p>
+        A brief summary about yourself. Highlight your experience, passion, and professional focus in a few compelling sentences.
+      </p>
+    </section>
+    <!-- Experience -->
+    <section class="section experience">
+      <h2>Experience</h2>
+      <div>
+        <h3>Job Title at Company Name</h3>
+        <p>
+          Brief description of your responsibilities and achievements. Use bullet points or short paragraphs to emphasize your role and impact.
+        </p>
+      </div>
+      <div>
+        <h3>Previous Role at Another Company</h3>
+        <p>
+          Describe your role and successes here, emphasizing skills that are relevant to your career path.
+        </p>
+      </div>
+    </section>
+    <!-- Education -->
+    <section class="section education">
+      <h2>Education</h2>
+      <div>
+        <h3>Degree, University Name</h3>
+        <p>
+          Mention your major, graduation year, and any honors or notable achievements during your studies.
+        </p>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section class="section skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">UX/UI</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
