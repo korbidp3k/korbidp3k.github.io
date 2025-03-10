@@ -36,6 +36,14 @@
       padding: 40px;
       text-align: center;
     }
+    header .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #ecf0f1;
+    }
     header h1 {
       font-size: 36px;
       margin-bottom: 10px;
@@ -44,6 +52,21 @@
     header p {
       font-size: 16px;
       margin: 0;
+    }
+    .social-links {
+      margin-top: 20px;
+    }
+    .social-links a {
+      text-decoration: none;
+      margin: 0 5px;
+      display: inline-block;
+    }
+    .social-links svg {
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+    .social-links a:hover svg {
+      transform: scale(1.1);
     }
     /* Section Styles */
     section {
@@ -101,7 +124,7 @@
       section {
         padding: 20px;
       }
-      h1 {
+      header h1 {
         font-size: 28px;
       }
     }
@@ -111,27 +134,63 @@
   <div class="container">
     <!-- Header -->
     <header>
-      <h1>Your Name</h1>
-      <p>Job Title | youremail@example.com | (123) 456-7890</p>
+      <!-- Replace 'your-photo.jpg' with the path or URL to your photo -->
+      <img src="AW_LowSq.jpg" alt="Adrianto Wirawan" class="profile-photo" />
+      <h1>Adrianto Wirawan</h1>
+      <p>Director of Bioinformatics Engineering @ Genomics England
+      <p>youremail@example.com | (+44) 456-7890</p>
+      <div class="social-links">
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/adriantowirawan/" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ecf0f1" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.8 19h-3v-9h3v9zm-1.5-10.3c-.966 0-1.7-.784-1.7-1.7s.734-1.7 1.7-1.7 1.7.784 1.7 1.7-.734 1.7-1.7 1.7zm13.3 10.3h-3v-4.5c0-1.082-.02-2.48-1.5-2.48-1.5 0-1.74 1.17-1.74 2.39v4.59h-3v-9h2.88v1.23h.04c.4-.762 1.38-1.562 2.84-1.562 3.04 0 3.6 2 3.6 4.6v4.73z"/>
+          </svg>
+        </a>
+        <!-- Google Scholar Icon -->
+        <a href="https://scholar.google.com/citations?user=OAFqv10AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <!-- Circle outline -->
+            <circle cx="12" cy="12" r="11" stroke="#ecf0f1" stroke-width="2" fill="none"/>
+            <!-- GS text -->
+            <text x="12" y="16" text-anchor="middle" font-size="10" font-family="Arial" fill="#ecf0f1">GS</text>
+          </svg>
+        </a>
+      </div>
     </header>
     <!-- About Me -->
     <section id="about">
       <h2>About Me</h2>
       <p>
-        A concise professional summary highlighting your expertise, accomplishments, and passion for your field. This section should quickly capture your value and background.
+        Adrianto Wirawan is an accomplished leader with extensive experience in the biotechnology and pharmaceutical sectors.
+        As Director of Bioinformatics Engineering at Genomics England, he oversees a diverse team of more than 40 software engineers and bioinformaticians, providing technical leadership and subject matter expertise in developing bioinformatics solutions across healthcare and research domains.
+        Previously, as Associate Director at AstraZeneca in the UK, he managed platform development, pipeline orchestration, and data management for a wide range of omics data—including genomics, transcriptomics, proteomics, and metabolomics.
+        He has also held key roles at companies such as immunoSCAPE and Human Longevity, Inc.
+        Adrianto earned his PhD in High-Performance Computing in Bioinformatics from Nanyang Technological University in Singapore, where he pioneered innovative DNA and protein-related bioinformatics tools using the PlayStation 3 gaming console as a computational platform.
       </p>
     </section>
     <!-- Experience -->
     <section id="experience">
       <h2>Experience</h2>
       <div class="job">
-        <h3>Job Title at Company Name</h3>
+        <h3>Director of Bioinformatics Engineering @ Genomics England, UK (2022 - present)</h3>
         <p>
           Describe your role, responsibilities, and key achievements. Emphasize results, leadership, and contributions that underscore your professional growth.
         </p>
       </div>
       <div class="job">
-        <h3>Previous Role at Another Company</h3>
+        <h3>Associate Director @ AstraZeneca, UK (2018 - 2022)</h3>
+        <p>
+          Outline your duties and successes. Focus on skills developed and projects led, providing clear examples of your expertise.
+        </p>
+      </div>
+      <div class="job">
+        <h3>Head of Bioinformatics @ immunoSCAPE, Singapore (2017 - 2018)</h3>
+        <p>
+          Outline your duties and successes. Focus on skills developed and projects led, providing clear examples of your expertise.
+        </p>
+      </div>
+      <div class="job">
+        <h3>Senior Bioinformatics Engineer @ Human Longevity Inc., Singapore (2015 - 2017)</h3>
         <p>
           Outline your duties and successes. Focus on skills developed and projects led, providing clear examples of your expertise.
         </p>
@@ -141,9 +200,16 @@
     <section id="education">
       <h2>Education</h2>
       <div class="education-item">
-        <h3>Degree, University Name</h3>
+        <h3>Doctor of Philosophy (PhD), Nanyang Technological University, Singapore</h3>
         <p>
-          Include your major, graduation year, and any distinctions or honors received during your studies.
+          Computer Engineering, 2010.
+          Thesis: High Performance Computing in Bioinformatics
+        </p>
+      </div>
+      <div class="education-item">
+        <h3>Bachelor of Engineering (B.Eng), Nanyang Technological University, Singapore</h3>
+        <p>
+          Computer Engineering, 2005.
         </p>
       </div>
     </section>
@@ -151,11 +217,14 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Responsive Design</div>
-        <div class="skill">UX/UI</div>
+        <div class="skill">Bioinformatics</div>
+        <div class="skill">Software Development & Engineering</div>
+        <div class="skill">Cloud Computing</div>
+        <div class="skill">High Performance Computing</div>
+        <div class="skill">Machine Learning & AI</div>
+        <div class="skill">Leadership</div>
+        <div class="skill">Technology Strategy</div>
+        <div class="skill">Team Management</div>
       </div>
     </section>
   </div>
