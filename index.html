@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your Name - CV</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet" />
   <style>
     /* Global Styles */
     * {
@@ -14,78 +14,95 @@
       padding: 0;
     }
     body {
-      background: #f4f4f4;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      background: #f8f9fa;
+      color: #333;
       line-height: 1.6;
-      color: #555;
-      padding: 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      border-radius: 8px;
-    }
-    /* Header Section */
-    header {
-      background: linear-gradient(135deg, #007BFF, #00C6FF);
-      color: #fff;
-      text-align: center;
       padding: 40px 20px;
     }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: #ecf0f1;
+      padding: 40px;
+      text-align: center;
+    }
     header h1 {
-      font-size: 42px;
-      font-weight: 700;
+      font-size: 36px;
       margin-bottom: 10px;
+      font-weight: 700;
     }
     header p {
-      font-size: 18px;
+      font-size: 16px;
+      margin: 0;
     }
     /* Section Styles */
-    .section {
+    section {
       padding: 30px 40px;
-      border-bottom: 1px dashed #e2e2e2;
+      border-bottom: 1px solid #e0e0e0;
     }
-    .section:last-child {
+    section:last-child {
       border-bottom: none;
     }
-    .section h2 {
-      font-size: 26px;
+    h2 {
+      font-size: 24px;
       margin-bottom: 15px;
-      color: #333;
-      border-left: 4px solid #007BFF;
+      font-weight: 600;
+      position: relative;
       padding-left: 10px;
     }
-    .section h3 {
+    h2::before {
+      content: "";
+      width: 4px;
+      height: 100%;
+      background: #2c3e50;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    h3 {
       font-size: 20px;
-      margin-bottom: 5px;
-      color: #007BFF;
+      margin: 10px 0 5px;
+      font-weight: 600;
+      color: #2c3e50;
     }
-    .section p {
+    p {
       margin-bottom: 15px;
+      font-size: 15px;
     }
-    /* Skills */
-    .skills-container {
+    /* Skills Section */
+    .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
     .skill {
-      background: #007BFF;
-      color: #fff;
+      background: #2c3e50;
+      color: #ecf0f1;
       padding: 8px 15px;
       border-radius: 20px;
       font-size: 14px;
+      font-weight: 600;
     }
-    /* Responsive */
+    /* Responsive Styles */
     @media (max-width: 600px) {
-      .section {
+      header {
+        padding: 30px 20px;
+      }
+      section {
         padding: 20px;
       }
-      header h1 {
-        font-size: 32px;
+      h1 {
+        font-size: 28px;
       }
     }
   </style>
@@ -95,45 +112,45 @@
     <!-- Header -->
     <header>
       <h1>Your Name</h1>
-      <p>Job Title • Email: youremail@example.com • Phone: (123) 456-7890</p>
+      <p>Job Title | youremail@example.com | (123) 456-7890</p>
     </header>
     <!-- About Me -->
-    <section class="section about">
+    <section id="about">
       <h2>About Me</h2>
       <p>
-        A brief summary about yourself. Highlight your experience, passion, and professional focus in a few compelling sentences.
+        A concise professional summary highlighting your expertise, accomplishments, and passion for your field. This section should quickly capture your value and background.
       </p>
     </section>
     <!-- Experience -->
-    <section class="section experience">
+    <section id="experience">
       <h2>Experience</h2>
-      <div>
+      <div class="job">
         <h3>Job Title at Company Name</h3>
         <p>
-          Brief description of your responsibilities and achievements. Use bullet points or short paragraphs to emphasize your role and impact.
+          Describe your role, responsibilities, and key achievements. Emphasize results, leadership, and contributions that underscore your professional growth.
         </p>
       </div>
-      <div>
+      <div class="job">
         <h3>Previous Role at Another Company</h3>
         <p>
-          Describe your role and successes here, emphasizing skills that are relevant to your career path.
+          Outline your duties and successes. Focus on skills developed and projects led, providing clear examples of your expertise.
         </p>
       </div>
     </section>
     <!-- Education -->
-    <section class="section education">
+    <section id="education">
       <h2>Education</h2>
-      <div>
+      <div class="education-item">
         <h3>Degree, University Name</h3>
         <p>
-          Mention your major, graduation year, and any honors or notable achievements during your studies.
+          Include your major, graduation year, and any distinctions or honors received during your studies.
         </p>
       </div>
     </section>
     <!-- Skills -->
-    <section class="section skills">
+    <section id="skills">
       <h2>Skills</h2>
-      <div class="skills-container">
+      <div class="skills">
         <div class="skill">HTML</div>
         <div class="skill">CSS</div>
         <div class="skill">JavaScript</div>
